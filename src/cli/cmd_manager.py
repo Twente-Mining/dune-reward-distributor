@@ -1,4 +1,4 @@
-from subprocess import STDOUT, check_output, TimeoutExpired, CalledProcessError
+from subprocess import check_output, TimeoutExpired, CalledProcessError
 
 from log_config import main_logger
 from util.client_utils import clear_terminal_chars
