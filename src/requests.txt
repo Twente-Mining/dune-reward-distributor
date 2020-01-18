@@ -1,4 +1,4 @@
-./dune-client rpc get http://127.0.0.1:8732/chains/main/blocks/head
+./dune-client rpc get http://127.0.0.1:8733/chains/main/blocks/head
 
 { "protocol": "Pt24m4xiPbLDhVgVfABUjirbmda3yohdN82Sp9FeuAXJ4eV9otd",
   "chain_id": "NetXJr1E3KSpaPR",
@@ -66,7 +66,7 @@
 
 
 
-./dune-client rpc get http://127.0.0.1:8732/chains/main/blocks/head/context/constants
+./dune-client rpc get http://127.0.0.1:8733/chains/main/blocks/head/context/constants
 Network Config: Testnet
 Warning:
 
