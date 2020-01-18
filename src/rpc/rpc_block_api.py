@@ -60,7 +60,7 @@ def test_get_revelation():
 
     wllt_clnt_mngr = WalletClientManager("~/dune-alpha/dune-client", "", "", "", True)
 
-    address_api = RpcBlockApiImpl({"NAME":"TESTNET"}, wllt_clnt_mngr, "127.0.0.1:8732")
+    address_api = RpcBlockApiImpl({"NAME":"TESTNET"}, wllt_clnt_mngr, "127.0.0.1:8733")
     print(address_api.get_revelation("dn1JaWseLoDzubj4Qu1vaPi3brrfUcjdhMJU"))
     print(address_api.get_revelation("KT1FXQjnbdqDdKNpjeM6o8PF1w8Rn2j8BmmG"))
     print(address_api.get_revelation("dn1UzraxKVhVnKrmtuPMvZ5Tzta3rFfNHyqP"))
