@@ -29,13 +29,13 @@ sudo apt-get -y install python3-pip
 Download the application repository using git clone:
 
 ```
-git clone https://github.com/habanoz/dune-reward-distributor
+git clone https://github.com/Twente-Mining/dune-reward-distributor twentepay
 ```
 
 To install required modules, use pip with requirements.txt provided.
 
 ```
-cd dune-reward-distributor
+cd twentepay
 pip3 install -r requirements.txt
 ```
 
