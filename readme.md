@@ -1,6 +1,10 @@
 
 <img src="https://raw.githubusercontent.com/habanoz/trd-art/master/logo-narrow/trd_512__1.png" width="128" />
 
+
+ ## Thank you Habanoz for your work on the Reward Distributor!
+
+
 ## Dune Reward Distributor : Run & Forget [![Build Status](https://travis-ci.com/habanoz/dune-reward-distributor.svg?branch=development)](https://travis-ci.com/habanoz/dune-reward-distributor)
 
 Dune Reward Distributor is a copy of Tezos Reward Distributor. This is my gift to the community. As the protocol evolves, DRD will need to be modified. However, I am not planning to maintain the project. Contributions from the community members are welcome.
