@@ -26,6 +26,7 @@ class CommandManager:
             logger.debug("--> Verbose : Command is |{}|".format(cmd))
 
         try:
+#            os.environ["TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER"] = "Y"
             output = check_output(cmd, shell=True, timeout=timeout, encoding='utf8')
         except TimeoutExpired as e:
             raise e
