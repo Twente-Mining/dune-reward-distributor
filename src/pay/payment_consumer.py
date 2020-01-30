@@ -58,6 +58,7 @@ class PaymentConsumer(threading.Thread):
         self.mm = EmailManager()
         self.wllt_clnt_mngr = wllt_clnt_mngr
         self.delegator_pays_xfer_fee = delegator_pays_xfer_fee
+        self.delegator_pays_ra_fee = delegator_pays_ra_fee
         self.publish_stats = publish_stats
         self.args = args
         self.network_config = network_config
