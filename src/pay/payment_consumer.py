@@ -32,9 +32,18 @@ def count_and_log_failed(payment_logs):
 
 
 class PaymentConsumer(threading.Thread):
+
     def __init__(self, name, payments_dir, key_name, client_path, payments_queue, node_addr, wllt_clnt_mngr,
-                 network_config, args=None, verbose=None, dry_run=None, delegator_pays_xfer_fee=True, dest_map=None,
-                 publish_stats=True):
+                 network_config, args=None, verbose=None, dry_run=None, reactivate_zeroed=True,
+                 delegator_pays_ra_fee=True, delegator_pays_xfer_fee=True, dest_map=None,
+                 publish_stats=True):    
+    
+
+    
+    
+#    def __init__(self, name, payments_dir, key_name, client_path, payments_queue, node_addr, wllt_clnt_mngr,
+#                 network_config, args=None, verbose=None, dry_run=None, delegator_pays_xfer_fee=True, dest_map=None,
+#                 publish_stats=True):
         super(PaymentConsumer, self).__init__()
 
         self.dest_map = dest_map if dest_map else {}
@@ -89,9 +98,13 @@ class PaymentConsumer(threading.Thread):
                 payment_items = [pi for pi in payment_items if pi.payable]
 
                 payment_items.sort(key=functools.cmp_to_key(cmp_by_type_balance))
-
                 batch_payer = BatchPayer(self.node_addr, self.key_name, self.wllt_clnt_mngr,
-                                         self.delegator_pays_xfer_fee, self.network_config)
+                                         self.delegator_pays_ra_fee, self.delegator_pays_xfer_fee,
+                                         self.network_config)
+
+                
+#                batch_payer = BatchPayer(self.node_addr, self.key_name, self.wllt_clnt_mngr,
+#                                         self.delegator_pays_xfer_fee, self.network_config)
 
                 # 3- do the payment
                 payment_logs, total_attempts = batch_payer.pay(payment_items, self.verbose, dry_run=self.dry_run)
