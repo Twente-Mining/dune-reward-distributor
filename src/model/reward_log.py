@@ -27,6 +27,7 @@ class RewardLog:
         self.balance = balance
         self.address = address
         self.paymentaddress = address
+        self.needs_activation = False
         self.type = type
         self.desc = ""
         self.skipped = False
